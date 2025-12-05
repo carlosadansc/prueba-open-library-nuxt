@@ -69,7 +69,7 @@ bun run preview
 ```
 
 
-#DESCRIPCIÓN ------------------------------
+## DESCRIPCIÓN 
 Aplicación web desarrollada con Nuxt 4, Vue y Pinia.
 Incluye una pantalla de inicio de sesión (login simulado) cuyo objetivo es demostrar el manejo básico del enrutamiento en Nuxt. Este proceso se gestiona mediante un middleware que valida si el estado de autenticación —almacenado en Pinia— es verdadero antes de permitir el acceso a determinadas rutas.
 
