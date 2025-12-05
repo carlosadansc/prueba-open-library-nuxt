@@ -31,6 +31,13 @@
       </nav>
 
       <div class="absolute bottom-0 left-0 right-0 p-4">
+      <UButton
+          size="sm"
+          color="primary"
+          variant="outline"
+          class="w-full mb-2 justify-center"
+          @click="clickLogout"
+        >Cerrar Sesión</UButton>
         <span class="text-sm text-gray-500 dark:text-gray-400"
           >Prueba Libros ft Open Library / Carlos Sánchez</span
         >
@@ -88,7 +95,9 @@ import { ref, computed } from "vue";
 import type { QueryParams } from "~/interfaces/QueryParams";
 
 const route = useRoute();
+const router = useRouter();
 const colorMode = useColorMode();
+const { logout } = useAuth();
 const { filter, year, search, limit, page } = useBooks();
 const sidebarOpen = ref(false);
 
@@ -125,4 +134,9 @@ const navigationLinks = [
     to: "/books",
   },
 ];
+
+const clickLogout = () => {
+    logout();
+    router.push('/login');
+};
 </script>

@@ -20,7 +20,10 @@
       truncate-text
     />
     <div class="flex justify-end border-t border-default pt-4 px-4">
+      <ULabel class="mr-2 self-center text-sm font-medium">Items por página:</ULabel>
+      <UInputNumber v-model="limit" class="w-30" :min="5" :max="20" :step="5" />
       <UPagination
+        class="ml-4"
         :page="page"
         :items-per-page="limit"
         :total="totalItems"
